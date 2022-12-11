@@ -1,0 +1,54 @@
+.error{
+    background-color: #aa0000;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.error p{
+    margin: 30px 15px;
+}
+.confirm-box > p{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.error button{
+    margin-bottom: 16px;
+    padding: 4px 16px;
+    background-color: #aa0000;
+}
+.confirm-box{
+    background-color: #00aa00;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.confirm-box button {
+    background-color: #00aa00;
+    margin: 5px 10px 16px;
+}
+.error-wrapper, .confirm-wrapper{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../images/popup-background.png');
+}
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.cell-box {
+    border: 2px solid #ffffff;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    width: 70px;
+    height: 70px;
+}
+.row > p{
+    margin: 10px;
+}

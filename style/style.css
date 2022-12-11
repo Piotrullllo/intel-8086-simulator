@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    overflow: hidden;
+    font-family: 'VT323', monospace;
+}
+body {
+    text-align: center;
+    background-color: #0000aa;
+    color: #ffff55;
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1{
+    margin: 20px 0;
+    font-size: 48px;
+    font-weight: 400;
+}
+#container{
+    margin: 16px;
+    border: 2px solid white;
+}
+label, input, p{
+    font-size: 20px;
+}
+button, select{
+    font-size: 18px;
+}
+input, select, button{
+    padding: 2px 12px;
+}
+.registers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.registers > div {
+    margin-left: 8px;
+    margin-bottom: 16px;
+    width: 20%;
+}
+.select-regs #cell, .select-regs select{
+    width: 80%;
+}
+.select-regs select option{
+    font-family: 'VT323', monospace;
+}
+.reg{
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 10px;
+    border: 2px solid white;
+}
+.reg label{
+    margin-right: 6px;
+}
+button, select, input{
+    background-color: #0000aa;
+    color:#ffff55;
+    border: 2px solid white;
+    text-align: center;
+}
+input[type="radio"]{
+    margin-left: 2px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+.submit-container, .registers{
+    margin-bottom: 20px;
+}
+.confirm{
+    padding: 10px;
+}
+#operations{
+    margin-top: 5px;
+}
+#container, .reg, .error, .confirm-box{
+    -webkit-box-shadow: 6px 6px 0px 4px rgba(85, 85, 85, 1);
+    -moz-box-shadow: 6px 6px 0px 4px rgba(85, 85, 85, 1);
+    box-shadow: 6px 6px 0px 4px rgba(85, 85, 85, 1);
+}
+button:hover, button:focus{
+    background-color: white !important;
+    color: black;
+    cursor: pointer;
+}
+@media (max-width: 515px){
+    .registers > div{
+        width: 40%;
+    }
+}
+@media (max-width: 450px){
+    .reg{
+        display: block;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #operations{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 280px){
+    .registers > div{
+        width: 90%;
+    }
+    h1{
+        font-size: 24px;
+    }
+}

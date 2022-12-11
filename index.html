@@ -4,11 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Intel 8086 Simulator</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/popups.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="container">
+        <h1>Intel 8086 Simulator</h1>
+        <div class="registers">
+            <div>
+                <label>
+                    AL: <input name="al" type="text" maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    AH: <input name="ah" type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label>
+                    BL: <input name="bl" type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label>
+                    BH: <input name="bh" type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label>
+                    CL: <input name="cl"nput type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label>
+                    CH: <input name="ch" type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label>
+                    DL: <input name="dl" type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+            <div>
+                <label>
+                    DH: <input name="dh" type="text"  maxlength="2" size="2">
+                </label>
+            </div>
+        </div>
+        <div class="operations">
+            <p>Operation:</p>
+            <select id="operations">
+                <option value="mov">MOV</option>
+                <option value="exh">EXH</option>
+                <option value="not">NOT</option>
+                <option value="inc">INC</option>
+                <option value="dec">DEC</option>
+                <option value="and">AND</option>
+                <option value="or">OR</option>
+                <option value="xor">XOR</option>
+                <option value="add">ADD</option>
+                <option value="sub">SUB</option>
+            </select>
+        </div>
+        <div class="select-regs">
     
+        </div>
+        <div class="submit-container">
+            <button class="confirm">Confirm operation</button>
+        </div>
+    </div>
+    <div class="error-wrapper">
+        <div class="error">
+            <p>Error code</p>
+            <button>OK</button>
+        </div>
+    </div>
+    <div class="confirm-wrapper">
+        <div class="confirm-box">
+            <p>Do you want to save operation effects?</p>
+            <div class="changes"></div>
+            <button class="accept">Yes</button>
+            <button class="cancel">No</button>
+        </div>
+    </div>
+    <script src="js/defaultValues.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/operationHandlers.js"></script>
+    <script src="js/operations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/eventListeners.js"></script>
 </body>
 </html>
