@@ -13,7 +13,6 @@ function inverseNumber (data) {
     });
     data.value = workingOn;
     displayChanges ([data]);
-    // saveChanges (data);
 }
 
 function increment (data) {
@@ -25,7 +24,6 @@ function increment (data) {
     workingOn++;
     data.value = decToHex (workingOn, data.type);
     displayChanges ([data]);
-    // saveChanges (data);
 }
 
 function decrement (data) {
@@ -37,14 +35,12 @@ function decrement (data) {
     workingOn--;
     data.value = decToHex (workingOn, data.type);
     displayChanges ([data]);
-    // saveChanges (data);
 }
 
 function move (data) {
     const length = data[1].type === "cell" ? 4 : 2;
     data[1].value = fillEmptySpace (data[0].value, length);
     displayChanges (data);
-    // saveChanges (data[1]);
 }
 
 function exchange (data) {
@@ -57,7 +53,6 @@ function exchange (data) {
         data[i].value = copy[i];
     }
     displayChanges (data);
-    // saveChanges (data[i]);
 }
 
 function logicalOperation (data, operation) {
@@ -105,7 +100,6 @@ function addOrSubtract (data, op) {
     finalNumber = decToHex (finalNumber, type);
     data = saveBoth (data, type, finalNumber);
     displayChanges (data);
-    // saveBoth (data, type, finalNumber);
 }
 
 function andOperation (firstNumber, secondNumber, length) {
